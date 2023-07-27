@@ -1,25 +1,12 @@
 from keras.datasets import cifar10
 from keras.layers import Dense, Activation
 from keras.models import Sequential
+from keras.utils import to_categorical
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.cm as cm
 import matplotlib.gridspec as gridspec
 import random
-
-
-def one_in_k_encoding(vec, k):
-    """ One-in-k encoding of vector to k classes
-
-    Args:
-       vec: numpy array - data to encode
-       k: int - number of classes to encode to (0,...,k-1)
-    """
-    n = vec.shape[0]
-    enc = np.zeros((n, k))
-    enc[np.arange(n), vec] = 1
-    return enc
-
 
 (X_train, Y_train), (X_test, Y_test) = cifar10.load_data()
 
@@ -27,23 +14,19 @@ X_train = X_train.reshape(50000, 3072)
 X_test = X_test.reshape(10000, 3072)
 
 classes = 10
-Y_train = one_in_k_encoding(Y_train, classes)
-Y_test = one_in_k_encoding(Y_test, classes)
+Y_train = to_categorical(Y_train, classes)
+Y_test = to_categorical(Y_test, classes)
 
 input_size = 3072
-batch_size = 50
-epochs = 50
+batch_size = 100
+epochs = 100
 
 # Build model 3 hidden layers for a more complex task and rather large hidden layers
 model = Sequential([
-    Dense(1024, input_dim=input_size),
-    Activation('relu'),
-    Dense(512),
-    Activation('relu'),
-    Dense(512),
-    Activation('sigmoid'),
-    Dense(classes),
-    Activation('softmax')
+    Dense(1024, input_dim=input_size, activation='relu'),
+    Dense(512, activation='relu'),
+    Dense(512, activation='sigmoid'),
+    Dense(classes, activation='softmax'),
 ])
 
 model.compile(loss='categorical_crossentropy',
