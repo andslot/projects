@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-weight_value = 1000
+weight_value = 100
 
 bias_value_1 = 30
 
