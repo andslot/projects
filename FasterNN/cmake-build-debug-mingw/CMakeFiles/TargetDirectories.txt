@@ -1,0 +1,3 @@
+C:/Users/slotk/OneDrive/Skrivebord/FasterNN/cmake-build-debug-mingw/CMakeFiles/FasterNN.dir
+C:/Users/slotk/OneDrive/Skrivebord/FasterNN/cmake-build-debug-mingw/CMakeFiles/edit_cache.dir
+C:/Users/slotk/OneDrive/Skrivebord/FasterNN/cmake-build-debug-mingw/CMakeFiles/rebuild_cache.dir
