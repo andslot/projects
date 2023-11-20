@@ -1,2 +1,4 @@
 FasterNN/.idea
 FasterNN/cmake-build-debug-mingw
+
+.gitignore
