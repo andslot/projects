@@ -1,6 +1,0 @@
-# ninja log v5
-9	533	7221806374211128	CMakeFiles/FasterNN.dir/Activation.cpp.obj	d086317a62511059
-1	681	7221806375696654	CMakeFiles/FasterNN.dir/main.cpp.obj	de04f88f19d19479
-682	906	7221806377816407	FasterNN.exe	1a510d94bc4535b
-8	414	7221941541647824	CMakeFiles/FasterNN.dir/Activation.cpp.obj	d086317a62511059
-414	584	7221941543291508	FasterNN.exe	1a510d94bc4535b
