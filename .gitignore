@@ -1,5 +1,11 @@
 FasterNN/.idea
 FasterNN/cmake-build-debug-mingw
+**/.idea/
+**/.venv/
+**/venv/
+**/.env/
+**/env/
+**/environment/
 
 .gitignore
 .idea
